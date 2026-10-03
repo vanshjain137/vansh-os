@@ -74,7 +74,36 @@ const dockApps = [
   },
 ];
 
-const blogPosts = [];
+const blogPosts = [
+  {
+    id: 1,
+    date: "September 29, 2026",
+    title: "Beyond Chatbots: The Rise of Agentic AI and What it Means for 2026",
+    image: "/images/blog-1.png",
+    link: "https://vansh-blog-app.vercel.app/blog-detail/695ec21ed81b41dd03296107"
+  },
+  {
+    id: 2,
+    date: "August 22, 2026",
+    title: "The Silicon Shield: How AI and Autonomous Systems are Redefining Modern Defense",
+    image: "/images/blog-2.png",
+    link: "https://vansh-blog-app.vercel.app/blog-detail/69676ec94654bd60d31ec4cf"
+  },
+  {
+    id: 3,
+    date: "July 18, 2026",
+    title: "The Art of Clean Code: Why Maintainable JavaScript is the Ultimate Developer Superpower",
+    image: "/images/blog-3.png",
+    link: "https://vansh-blog-app.vercel.app/blog-detail/6967717b4654bd60d31ec4ea"
+  },
+  {
+    id: 4,
+    date: "June 28, 2026",
+    title: "Building a Secure MERN Stack Blog: Beyond the Basics of CRUD",
+    image: "/images/blog-4.png",
+    link: "https://vansh-blog-app.vercel.app/blog-detail/69676cc24654bd60d31ec4bc"
+  }
+];
 
 const techStack = [
   {
@@ -110,6 +139,13 @@ const socials = [
     bg: "#05b6f6",
     link: "https://www.linkedin.com/in/vansh-jain-b955a23a1",
   },
+  {
+    id: 3,
+    text: "Email",
+    icon: "/icons/user.svg",
+    bg: "#00A154",
+    link: "mailto:vanshjainprof@gmail.com",
+  }
 ];
 
 const photosLinks = [
