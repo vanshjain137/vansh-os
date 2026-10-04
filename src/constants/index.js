@@ -156,43 +156,38 @@ const photosLinks = [
   },
   {
     id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
+    icon: "/icons/user.svg",
+    title: "Personal",
   },
   {
     id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
+    icon: "/icons/work.svg",
+    title: "Projects",
   },
   {
     id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
+    icon: "/icons/file.svg",
+    title: "Blogs",
   },
 ];
 
 const gallery = [
-  {
-    id: 1,
-    img: "/images/vansh-1.png",
-  },
-  {
-    id: 2,
-    img: "/images/vansh-2.png",
-  },
-  {
-    id: 3,
-    img: "/images/vansh-3.png",
-  },
-  {
-    id: 4,
-    img: "/images/project-1.png",
-  },
+  // Personal Photos
+  { id: 1, img: "/images/vansh-1.png", category: "Personal" },
+  { id: 2, img: "/images/vansh-2.png", category: "Personal" },
+  { id: 3, img: "/images/vansh-3.png", category: "Personal" },
+  
+  // Project UI Screenshots
+  { id: 4, img: "/images/project-1.png", category: "Projects" },
+  { id: 5, img: "/images/project-2.png", category: "Projects" },
+  { id: 6, img: "/images/project-3.png", category: "Projects" },
+  { id: 7, img: "/images/project-4.png", category: "Projects" },
+  
+  // Blog Post Covers
+  { id: 8, img: "/images/blog-1.png", category: "Blogs" },
+  { id: 9, img: "/images/blog-2.png", category: "Blogs" },
+  { id: 10, img: "/images/blog-3.png", category: "Blogs" },
+  { id: 11, img: "/images/blog-4.png", category: "Blogs" },
 ];
 
 export {

@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable"
 
-import { Dock, Navbar, Welcome } from "#components/index.js"
-import { Contact, Finder, Image, Resume, Safari, Terminal, Text } from "#windows/index.js";
+import { Dock, Home, Navbar, Welcome } from "#components/index.js"
+import { Contact, Finder, Image, Photos, Resume, Safari, Terminal, Text } from "#windows/index.js";
 
 gsap.registerPlugin(Draggable);
 
@@ -20,6 +20,9 @@ const App = () => {
       <Text/>
       <Image/>
       <Contact/>
+      <Photos/>
+
+      <Home/>
     </main>
   )
 }

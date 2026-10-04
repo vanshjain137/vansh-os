@@ -3,12 +3,13 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { useLayoutEffect, useRef } from "react";
+import clsx from "clsx";
 
 const WindowWrapper = (Component, windowKey) => {
 
     const Wrapped = (props) => {
         const { focusWindow, windows } = useWindowStore();
-        const { isOpen, zIndex } = windows[windowKey];
+        const { isOpen, zIndex, isMaximized } = windows[windowKey];
         const ref = useRef(null)
 
         useGSAP(()=>{
@@ -24,9 +25,16 @@ const WindowWrapper = (Component, windowKey) => {
             const el = ref.current;
             if(!el) return;
 
-            const [instance] = Draggable.create(el, { onPress: () => focusWindow(windowKey) })
+            const headerEl = el.querySelector("#window-header");
 
-            return () => instance.kill();
+            const [instance] = Draggable.create(el, {
+                trigger: headerEl ? headerEl : el,
+                onPress: () => focusWindow(windowKey) 
+            })
+
+            return () => {
+                if (instance) instance.kill();
+            };
         }, [])
 
         useLayoutEffect(()=>{
@@ -40,7 +48,11 @@ const WindowWrapper = (Component, windowKey) => {
                 id={windowKey}
                 ref={ref}
                 style={{ zIndex }}
-                className="absolute"
+                onPointerDownCapture={() => focusWindow(windowKey)}
+                className={clsx(
+                    "absolute",
+                    isMaximized && "top-11.25! left-0! w-full! max-w-none! h-[calc(100%_-_45px)]! transform-none! rounded-none! transition-all duration-300"
+                )}
             >
                 <Component {...props}/>
             </section>)

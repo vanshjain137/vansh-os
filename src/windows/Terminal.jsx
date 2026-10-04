@@ -8,13 +8,13 @@ const Terminal = () => {
         <>
             <div id="window-header">
                 <WindowControls target="terminal"/>
-                <h2>Teck Stack</h2>
+                <h2>Tech Stack</h2>
             </div>
 
             <div className="techstack">
                 <p>
                     <span className="font-bold">@vansh % </span>
-                    show teck stack
+                    show tech stack
                 </p>
 
                 <div className="label">
