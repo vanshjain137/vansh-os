@@ -5,10 +5,7 @@ import useWindowStore from "#store/window.js";
 import { Download, ZoomIn, ZoomOut } from "lucide-react";
 import { Document, Page, pdfjs } from 'react-pdf';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const Resume = () => {
     const isMaximized = useWindowStore((state) => state.windows.resume?.isMaximized);
@@ -16,10 +13,8 @@ const Resume = () => {
 
     useEffect(() => {
         if (isMaximized) {
-            // Instantly jumps to 110% when maximized
             setScale(1.1); 
         } else {
-            // Reverts to exactly 100% on the small screen
             setScale(1.0);
         }
     }, [isMaximized]);
@@ -28,7 +23,6 @@ const Resume = () => {
     const zoomOut = () => setScale(prev => Math.max(prev - 0.2, 0.5));
 
     return (
-        // Conditionally swap the background: dark gray when maximized, white when small
         <div className={`flex flex-col w-full h-full transition-colors ${isMaximized ? 'bg-[#525659]' : 'bg-white'}`}>
             <div id="window-header" className="w-full bg-gray-100 border-b border-gray-300 flex items-center justify-between pr-4 relative shrink-0">
                 <WindowControls target="resume" />
@@ -47,14 +41,12 @@ const Resume = () => {
                 </div>
             </div>
 
-            {/* Conditionally add/remove padding so the small screen is perfectly flush */}
             <div className={`flex-1 flex justify-center overflow-auto w-full min-h-0 ${isMaximized ? 'py-10' : 'py-0'}`}>
                 <Document file="files/resume.pdf">
                     <Page
                         pageNumber={1}
                         renderTextLayer={false}
                         renderAnnotationLayer={false}
-                        // Only show the heavy document shadow on the dark background
                         className={isMaximized ? "shadow-2xl" : ""}
                         scale={scale} 
                     />
