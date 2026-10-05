@@ -1,16 +1,67 @@
-# React + Vite
+# 🍏 macOS Interactive Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vansh-jain-b955a23a1/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Website-blue?style=for-the-badge)](https://your-vercel-link-here.vercel.app/)
 
-Currently, two official plugins are available:
+A high-fidelity, interactive macOS desktop environment built for the web. This project serves as my personal developer portfolio, moving beyond static pages to provide an immersive, OS-level user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🔗 Project Links
+- **Live Demo:** [https://your-vercel-link-here.vercel.app/](https://your-vercel-link-here.vercel.app/)
+- **GitHub Repository:** [View Repository](https://github.com/vanshjain137/vansh-os)
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Core OS Mechanics
+- **Authentic Window Management:** Dynamic z-index layering, maximize/minimize states, and focus mechanics simulating a real operating system.
+- **Advanced DOM Manipulation:** Bounded drag-and-drop window mechanics utilizing custom `onPointerDownCapture` event handling.
+- **Global State Management:** Seamless state sharing across disparate "apps" (Finder, Safari, Terminal) without prop drilling using Zustand.
 
-## Expanding the ESLint configuration
+### Integrated Applications
+- **Finder & Terminal:** Interactive file system navigation and a command-line interface mimicking real bash commands.
+- **Resume Viewer:** Built-in PDF reader with un-clickable annotation layers optimized for buttery-smooth window dragging.
+- **Cinema Mode:** Dynamic media scaling and high-performance GSAP animations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛡️ Architecture & Best Practices
+- **Optimized Asset Delivery:** Custom CDN worker configuration for `react-pdf` to optimize Vite production chunk splitting.
+- **Clean Event Handling:** Memory-leak prevention by properly binding and unbinding complex mouse and pointer events.
+- **Responsive Scaling:** UI components scale seamlessly without breaking desktop metaphor constraints.
+- **Clean Code:** Zero ESLint warnings and structured component architecture.
+
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Vite
+- **Styling:** Tailwind CSS
+- **Animations:** GSAP
+- **State Management:** Zustand, React Context
+- **Integrations:** React-PDF
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone [https://github.com/vanshjain137/vansh-os.git](https://github.com/vanshjain137/vansh-os.git)
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+## 📦 Production Build
+
+To create an optimized production build:
+
+   ```bash
+   npm run build
+   ```
+
+---
+
+Developed by **Vansh Jain**
