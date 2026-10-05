@@ -1,12 +1,12 @@
 # 🍏 macOS Interactive Portfolio
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vansh-jain-b955a23a1/)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Website-blue?style=for-the-badge)](https://your-vercel-link-here.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-View_Website-blue?style=for-the-badge)](https://vansh-os-three.vercel.app/)
 
 A high-fidelity, interactive macOS desktop environment built for the web. This project serves as my personal developer portfolio, moving beyond static pages to provide an immersive, OS-level user experience.
 
 ## 🔗 Project Links
-- **Live Demo:** [https://your-vercel-link-here.vercel.app/](https://your-vercel-link-here.vercel.app/)
+- **Live Demo:** [https://vansh-os-three.vercel.app/](https://vansh-os-three.vercel.app/)
 - **GitHub Repository:** [View Repository](https://github.com/vanshjain137/vansh-os)
 
 ## 🚀 Key Features
