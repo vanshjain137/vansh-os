@@ -137,7 +137,7 @@ const socials = [
     text: "LinkedIn",
     icon: "/icons/linkedin.svg",
     bg: "#05b6f6",
-    link: "https://www.linkedin.com/in/vansh-jain-b955a23a1",
+    link: "https://www.linkedin.com/in/vanshjain137",
   },
   {
     id: 3,
